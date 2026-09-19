@@ -6,7 +6,7 @@
 
 ## ดาวน์โหลดซอร์ส
 
-GitHub: https://github.com/SupCsiteamGeng1/nova-drift
+GitHub (บัญชีที่เชื่อมไว้): https://github.com/SupCsiteamGeng1/nova-drift
 
 ```bash
 git clone https://github.com/SupCsiteamGeng1/nova-drift.git
@@ -17,6 +17,8 @@ npm run dev
 
 `npm install` จะแตกไฟล์สไปรต์จาก `.png.b64` ให้เอง
 
+โฟลเดอร์ Google Drive สำหรับวาง zip: https://drive.google.com/drive/folders/1LhoI4x8YsWaFpQ8Igss6qIiWH1Vkddf4
+
 ## รันบนเครื่อง
 
 ต้องมี Node.js 20+
@@ -26,27 +28,29 @@ npm install
 npm run dev
 ```
 
+เปิดเบราว์เซอร์ที่พอร์ตที่สคริปต์ `dev` ใช้ (ค่าเริ่มต้น 8080)
+
 ```bash
 npm run typecheck
 npm run build
 ```
 
-ฐานข้อมูลคะแนนแข่งใช้ PGLite ในเครื่อง (ไม่ต้องตั้ง Neon ก็เล่นแดชบอร์ดได้)
+ฐานข้อมูลคะแนนแข่งใช้ PGLite ในเครื่อง (ไม่ต้องตั้ง Neon ก็เล่นแดชบอร์ดได้)  
 ถ้าจะใช้ Postgres จริง ตั้ง `DATABASE_URL` แล้วรัน `npm run db:migrate`
 
 ## สแต็ก
 
 - TanStack Start + React 19 + Tailwind v4
 - Canvas 2D เกมลูปใน `src/game/game.ts`
-- คะแนนแข่ง: `src/lib/board.ts` + `migrations/0002_scores.sql`
+- คะแนนแข่ง: `src/lib/board.ts` + ตาราง `migrations/0002_scores.sql`
 - Auth ปิด (`VITE_AUTH_ENABLED=false` ใน `.grok/app-env.json`)
 
 ## ไฟล์สำคัญ
 
-| ไฟล์ | หน้าที |
+| ไฟล์ | หน้าที่ |
 |---|---|
 | `src/game/game.ts` | คลื่นศัตรู, บอส, บอมบ์, อาวุธ |
-| `src/game/constants.ts` | ค่าบาลานซ์ |
+| `src/game/constants.ts` | ค่าบาลานซ์ ความเร็ว คลื่น บอมบ์ |
 | `src/game/input.ts` | WASD / ลูกศร / เมาส์ / บอมบ์ |
 | `src/components/overlays.tsx` | HUD, เมนู, แดชบอร์ดแข่ง |
 | `src/game/store.ts` | สถานะจอและ HUD |

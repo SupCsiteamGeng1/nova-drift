@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans Thai", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Oxanium", "IBM Plex Sans Thai", sans-serif;
+
+  --color-background: #07080c;
+  --color-foreground: #e8eaef;
+  --color-card: #12151c;
+  --color-card-2: #1a1e27;
+  --color-muted: #8b919d;
+  --color-faint: #5c6370;
+  --color-border: #2a303b;
+  --color-primary: #d5dbe6;
+  --color-primary-foreground: #0b0d12;
+  --color-accent: #7ec8e3;
+  --color-danger: #e07a6a;
+  --color-ok: #7dcea0;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    margin: 0;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

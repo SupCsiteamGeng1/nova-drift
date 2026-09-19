@@ -17,7 +17,12 @@ npm run dev
 
 `npm install` จะแตกไฟล์สไปรต์จาก `.png.b64` ให้เอง
 
-โฟลเดอร์ Google Drive สำหรับวาง zip: https://drive.google.com/drive/folders/1LhoI4x8YsWaFpQ8Igss6qIiWH1Vkddf4
+Repo นี้เป็น private ในบัญชี GitHub ที่เชื่อมไว้
+
+ดาวน์โหลดซอร์สเป็น ZIP จากปุ่ม Code → Download ZIP แล้วลากไฟล์ไปวางในโฟลเดอร์ Drive ได้:
+https://drive.google.com/drive/folders/1LhoI4x8YsWaFpQ8Igss6qIiWH1Vkddf4
+
+Google Drive ไม่ได้รันเกมจากลิงก์โฟลเดอร์ — ใช้สำหรับเก็บซอร์สเพื่อพัฒนาต่อเท่านั้น
 
 ## รันบนเครื่อง
 
